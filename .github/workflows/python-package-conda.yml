@@ -31,5 +31,6 @@ jobs:
         sudo mv chromedriver /usr/local/bin/
         sudo chmod +x /usr/local/bin/chromedriver
 
+
     - name: Run scraping script
       run: python complete.py
