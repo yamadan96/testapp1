@@ -51,7 +51,7 @@
 # In[153]:
 
 
-import chromedriver_binary
+# import chromedriver_binary
 from selenium import webdriver
 import urllib.request as req
 import requests
