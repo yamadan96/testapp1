@@ -17,7 +17,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 # 2. chromedriverのGet(インスタンス化)
 
 # In[154]:
-options.add_argument('--headless')
+
 #※headlessにしている
 # browser = webdriver.Chrome(options=options, executable_path=driver_path)
 
