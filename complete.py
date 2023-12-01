@@ -1,56 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# 1. 必要なモジュールのimport
-
-# In[152]:
-
-
-# import time
-# import requests
-# import urllib.request
-# from selenium import webdriver
-# from selenium.webdriver.support import expected_conditions as EC
-# from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.common.by import By
-# from selenium.webdriver.chrome.service import Service
-# from selenium.webdriver.chrome.service import Service as ChromeService
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support.select import Select
-# from webdriver_manager.chrome import ChromeDriverManager
-
-# # LINE Notify APIのURL
-# url = "https://notify-api.line.me/api/notify"
-# # LINE Notifyのトークン
-# token = 'fmGPY9XHiQzosJq5L8WrUhB4Hg4aRNOdTXvTcDmJkCs'
-# headers = {"Authorization" : "Bearer "+ token}
-
-# # ChromeDriverのオプション設定
-# options = Options()
-# options.add_argument('--headless')
-# service = Service(ChromeDriverManager().install())
-
-# while True:
-#     driver = webdriver.Chrome(service=service,options=options)
-#     driver.get('https://note.com/physy/n/n324d9d0a93e0')  # 空き状況をチェックするURL
-
-#     # XPathを使用して空き状況を取得
-#     availability = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div[1]/div[2]/main/div[1]/article/div[1]/div/div/div[2]/ul/li[1]/p'))).text
-
-#     # 空き状況をLINE通知APIに送信
-#     message =  f'空き状況: {availability}'
-#     payload = {"message" :  message}
-#     r = requests.post(url ,headers = headers ,params=payload)
-
-#     driver.quit()
-
-#     # 10分待つ
-#     time.sleep(600)
-
-
-# In[153]:
-
-
 # import chromedriver_binary
 from selenium import webdriver
 import urllib.request as req
@@ -70,15 +17,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 # 2. chromedriverのGet(インスタンス化)
 
 # In[154]:
-
-# herokuのchromedriverのPATHを指定
-driver_path = '/app/.chromedriver/bin/chromedriver'
-options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 #※headlessにしている
 # browser = webdriver.Chrome(options=options, executable_path=driver_path)
 
-browser = webdriver.Chrome(ChromeDriverManager().install())
+options = Options()
+options.add_argument('--headless')
+browser = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+# browser = webdriver.Chrome(ChromeDriverManager().install())
 browser.implicitly_wait(3)
 
 
