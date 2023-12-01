@@ -1,10 +1,9 @@
 name: Scheduled Scraping
 
 on:
-  push:
-  # schedule:
-    # - cron: '0 0 * * *'  # 例: 毎日UTC 00:00に実行
-    
+  schedule:
+    - cron:  '0 * * * *'
+
 
 jobs:
   scrape:
