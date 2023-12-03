@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt  # 必要な場合、requirements.txtを適切に設定
+        pip install --upgrade -r requirements.txt  # 必要な場合、requirements.txtを適切に設定
 
     - name: Install Chrome and chromedriver
       run: |
