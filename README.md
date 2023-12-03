@@ -1,7 +1,7 @@
 # テニスコート予約自動化スクリプト
 このプロジェクトは、市川市のテニスコート予約サイトから利用可能なテニスコートの空き情報を自動的に取得し、LINE Notifyを通じて通知を送るPythonスクリプトです。
 
-![Image from Gyazo](https://github.com/yamadan96/testapp1/issues/1)
+![Image from Gyazo](https://github.com/yamadan96/testapp1/assets/82156810/ee0cc7ff-d92f-410b-b848-901b1918ac18)
 
 ## インストール方法
 1. Python 3.8以上をインストールしてください。
