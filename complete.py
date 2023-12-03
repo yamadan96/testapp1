@@ -16,6 +16,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 options = Options()
 options.add_argument('--headless') #browser操作を確認しない場合
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
 browser = webdriver.Chrome(ChromeDriverManager().install())
 browser.implicitly_wait(3)
 
